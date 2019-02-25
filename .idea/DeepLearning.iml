@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/book/ch01" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/book/ch02" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/book/ch03" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/book/ch04" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/book/ch05" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/book/ch06" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/book/ch07" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/book/ch08" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/book/common" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/book/dataset" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/book" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sun" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sun/util" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sun/main" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="projectConfiguration" value="Nosetests" />
+    <option name="PROJECT_TEST_RUNNER" value="Nosetests" />
+  </component>
+</module>
