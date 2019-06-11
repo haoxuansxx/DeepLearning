@@ -1,5 +1,6 @@
 # coding: utf-8
 import sys, os
+
 sys.path.append(os.pardir)  # 为了导入父目录的文件而进行的设定
 import numpy as np
 from mnist import load_mnist
@@ -9,8 +10,9 @@ from PIL import Image
 def img_show(img):
     pil_img = Image.fromarray(np.uint8(img))
     pil_img.show()
-pass
 
+
+pass
 
 (x_train, t_train), (x_test, t_test) = load_mnist(flatten=True, normalize=False)
 

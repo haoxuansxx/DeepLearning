@@ -16,7 +16,7 @@ x_train = x_train[:300]
 t_train = t_train[:300]
 
 # weight decay（权值衰减）的设定 =======================
-#weight_decay_lambda = 0 # 不使用权值衰减的情况
+# weight_decay_lambda = 0 # 不使用权值衰减的情况
 weight_decay_lambda = 0.1
 # ====================================================
 
@@ -54,7 +54,6 @@ for i in range(1000000000):
         epoch_cnt += 1
         if epoch_cnt >= max_epochs:
             break
-
 
 # 3.绘制图形==========
 markers = {'train': 'o', 'test': 's'}

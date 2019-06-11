@@ -17,6 +17,8 @@
       <sourceFolder url="file://$MODULE_DIR$/sun" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sun/util" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sun/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sun/test" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sun/service" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

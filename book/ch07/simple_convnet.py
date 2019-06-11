@@ -1,5 +1,6 @@
 # coding: utf-8
 import sys, os
+
 sys.path.append(os.pardir)  # 为了导入父目录的文件而进行的设定
 import pickle
 from collections import OrderedDict
@@ -22,16 +23,17 @@ class SimpleConvNet:
         指定'relu'或'he'的情况下设定“He的初始值”
         指定'sigmoid'或'xavier'的情况下设定“Xavier的初始值”
     """
-    def __init__(self, input_dim=(1, 28, 28), 
-                 conv_param={'filter_num':30, 'filter_size':5, 'pad':0, 'stride':1},
+
+    def __init__(self, input_dim=(1, 28, 28),
+                 conv_param={'filter_num': 30, 'filter_size': 5, 'pad': 0, 'stride': 1},
                  hidden_size=100, output_size=10, weight_init_std=0.01):
         filter_num = conv_param['filter_num']
         filter_size = conv_param['filter_size']
         filter_pad = conv_param['pad']
         filter_stride = conv_param['stride']
         input_size = input_dim[1]
-        conv_output_size = (input_size - filter_size + 2*filter_pad) / filter_stride + 1
-        pool_output_size = int(filter_num * (conv_output_size/2) * (conv_output_size/2))
+        conv_output_size = (input_size - filter_size + 2 * filter_pad) / filter_stride + 1
+        pool_output_size = int(filter_num * (conv_output_size / 2) * (conv_output_size / 2))
 
         # 初始化权重
         self.params = {}
@@ -71,17 +73,17 @@ class SimpleConvNet:
         return self.last_layer.forward(y, t)
 
     def accuracy(self, x, t, batch_size=100):
-        if t.ndim != 1 : t = np.argmax(t, axis=1)
-        
+        if t.ndim != 1: t = np.argmax(t, axis=1)
+
         acc = 0.0
-        
+
         for i in range(int(x.shape[0] / batch_size)):
-            tx = x[i*batch_size:(i+1)*batch_size]
-            tt = t[i*batch_size:(i+1)*batch_size]
+            tx = x[i * batch_size:(i + 1) * batch_size]
+            tt = t[i * batch_size:(i + 1) * batch_size]
             y = self.predict(tx)
             y = np.argmax(y, axis=1)
-            acc += np.sum(y == tt) 
-        
+            acc += np.sum(y == tt)
+
         return acc / x.shape[0]
 
     def numerical_gradient(self, x, t):
@@ -140,7 +142,7 @@ class SimpleConvNet:
         grads['W3'], grads['b3'] = self.layers['Affine2'].dW, self.layers['Affine2'].db
 
         return grads
-        
+
     def save_params(self, file_name="params.pkl"):
         params = {}
         for key, val in self.params.items():
@@ -155,5 +157,5 @@ class SimpleConvNet:
             self.params[key] = val
 
         for i, key in enumerate(['Conv1', 'Affine1', 'Affine2']):
-            self.layers[key].W = self.params['W' + str(i+1)]
-            self.layers[key].b = self.params['b' + str(i+1)]
+            self.layers[key].W = self.params['W' + str(i + 1)]
+            self.layers[key].b = self.params['b' + str(i + 1)]
